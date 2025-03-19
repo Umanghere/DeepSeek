@@ -1,7 +1,7 @@
-import mongoos from 'mongoose';
+import mongoose from 'mongoose';
 
-const UserSchema = new mongoos.Schema(
-    {
+const UserSchema = new mongoose.Schema(
+     {
         _id: {type: String, required: true},
         name: {type: String, required: true},
         email: {type: String, required: true},
@@ -10,6 +10,6 @@ const UserSchema = new mongoos.Schema(
     { timestamps: true }
 )
 
-const User = mongoos.models.User || mongoos.model("User", UserSchema);
+const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
 export default User;
