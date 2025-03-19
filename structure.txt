@@ -1,0 +1,78 @@
+Folder PATH listing for volume Data
+Volume serial number is 3A61-62DB
+D:.
+|   .env.local
+|   .gitignore
+|   eslint.config.mjs
+|   jsconfig.json
+|   middleware.ts
+|   next.config.mjs
+|   package-lock.json
+|   package.json
+|   postcss.config.mjs
+|   README.md
+|   structure.txt
+|                  
++---app
+|   |   afavicon.ico
+|   |   favicon.ico
+|   |   globals.css
+|   |   layout.js
+|   |   page.jsx
+|   |   
+|   \---api
+|       \---clerk
+|               route.js
+|               
++---assets
+|       arrow_icon.svg
+|       arrow_icon_dull.svg
+|       assets.js
+|       chat_icon.svg
+|       chat_icon_dull.svg
+|       copy_icon.svg
+|       deepthink_icon.svg
+|       delete_icon.svg
+|       dislike_icon.svg
+|       favicon.ico
+|       like_icon.svg
+|       logo_icon.svg
+|       logo_text.svg
+|       menu_icon.svg
+|       new_icon.svg
+|       pencil_icon.svg
+|       phone_icon.svg
+|       phone_icon_dull.svg
+|       pin_icon.svg
+|       profile_icon.svg
+|       qrcode.png
+|       regenerate_icon.svg
+|       search_icon.svg
+|       sidebar_close_icon.svg
+|       sidebar_icon.svg
+|       tbsm.jpg
+|       tbsm.svg
+|       three_dots.svg
+|       
++---components
+|       ChatLabel.jsx
+|       Message.jsx
+|       PromptBox.jsx
+|       Sidebar.jsx
+|       
++---config
+|       db.js
+|       
++---context
+|       AppContext.jsx
+|       
++---models
+|       User.js
+|           
+\---public
+        file.svg
+        globe.svg
+        next.svg
+        vercel.svg
+        window.svg
+        
