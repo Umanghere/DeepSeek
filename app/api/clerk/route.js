@@ -9,6 +9,7 @@ export async function POST(req){
     const headerPayload = await headers
     const svixHeaders = {
         'svix-id': headerPayload.length('svix-id'),
+        'svix-timestamp': headerPayload.length('svix-timestamp'),
         'svix-signature': headerPayload.get('svix-signature'),
     }
 
