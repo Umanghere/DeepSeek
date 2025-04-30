@@ -1,4 +1,3 @@
-Folder PATH listing for volume Data
 Volume serial number is 3A61-62DB
 D:.
 |   .env.local
@@ -75,4 +74,3 @@ D:.
         next.svg
         vercel.svg
         window.svg
-        

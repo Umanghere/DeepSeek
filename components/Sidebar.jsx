@@ -6,10 +6,15 @@ import { useAppContext } from "@/context/AppContext";
 import ChatLabel from "./ChatLabel";
 
 const Sidebar = ({ expand, setExpand }) => {
+  const { openSignIn } = useClerk();
+  const { user, chats, createNewChat } = useAppContext();
+  const [openMenu, setOpenMenu] = useState({ id: 0, open: false });
 
-  const {openSignIn} = useClerk();
-  const {user} = useAppContext()
-  const [openMenu, setOpenMenu] = useState({id: 0, open:false}) 
+  // Handle creating a new chat
+  const handleNewChat = async () => {
+    await createNewChat();
+    // No need to manually update state as it's now handled in AppContext
+  };
 
   return (
     <div
@@ -57,6 +62,7 @@ const Sidebar = ({ expand, setExpand }) => {
         </div>
 
         <button
+          onClick={handleNewChat}
           className={`mt-8 flex items-center justify-center cursor-pointer transition-all 
     ${
       expand
@@ -88,10 +94,17 @@ const Sidebar = ({ expand, setExpand }) => {
           }`}
         >
           <p className="my-1">Recents</p>
-          
-          {/* ----------- Chatlabel  ----------- */}
-          <ChatLabel openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
+          {/* ----------- Chatlabel  ----------- */}
+          {chats.map((chat, index) => (
+            <ChatLabel
+              key={chat._id || index}
+              name={chat.name}
+              id={chat._id}
+              openMenu={openMenu}
+              setOpenMenu={setOpenMenu}
+            />
+          ))}
         </div>
       </div>
 
@@ -123,19 +136,27 @@ const Sidebar = ({ expand, setExpand }) => {
               ></div>
             </div>
           </div>
-          {expand && <> <span>Get App</span> <Image alt="" src={assets.new_icon} /> </>}
+          {expand && (
+            <>
+              {" "}
+              <span>Get App</span> <Image alt="" src={assets.new_icon} />{" "}
+            </>
+          )}
         </div>
 
-
         <div
-        // user is coming from Clerk
-        onClick={ user? null : openSignIn } 
-        className={`flex items-center ${expand ? 'hover:bg-white/10 rounded-lg' : 'justify-center w-full'} gap-3 text-white/60 text-sm p-2 mt-2 cursor-pointer`}>
-            {
-              user ? <UserButton /> :
-              <Image src={assets.profile_icon} alt='' className="w-7" />
-            }
-            {expand && <span>My Profile</span>}
+          // user is coming from Clerk
+          onClick={user ? null : openSignIn}
+          className={`flex items-center ${
+            expand ? "hover:bg-white/10 rounded-lg" : "justify-center w-full"
+          } gap-3 text-white/60 text-sm p-2 mt-2 cursor-pointer`}
+        >
+          {user ? (
+            <UserButton />
+          ) : (
+            <Image src={assets.profile_icon} alt="" className="w-7" />
+          )}
+          {expand && <span>My Profile</span>}
         </div>
       </div>
     </div>
