@@ -145,7 +145,7 @@ const PromptBox = ({ setIsLoading, isLoading }) => {
     <form
       onSubmit={sendPrompt}
       className={`w-full ${
-        selectedChat && selectedChat.messages?.length > 0 ? "max-w-3xl" : "max-w-2xl"
+        selectedChat && selectedChat?.messages.length > 0 ? "max-w-3xl" : "max-w-2xl"
       } bg-[#404045] p-4 rounded-3xl mt-4 transition-all`}
     >
       <textarea

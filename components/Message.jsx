@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 import Markdown from 'react-markdown'
-import Prism from 'prismjs'
+import Prism from "prismjs"
 import toast from 'react-hot-toast'
 
 const Message = ({role, content}) => {
