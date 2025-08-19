@@ -38,13 +38,17 @@ A sophisticated AI chatbot that mimics DeepSeek functionality using Meta's LLaMA
 - React.js
 - CSS3
 - JavaScript (ES6+)
+
 **Backend:** 
 - Node.js
 - Express.js
+
 **Authentication:** 
 - Clerk (User Management & Auth)
+
 **AI Integration:** 
 - Meta LLaMA API
+
 **Other:**
 - REST APIs, Session Management
 
