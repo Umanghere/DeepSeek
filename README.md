@@ -8,6 +8,21 @@ A sophisticated AI chatbot that mimics DeepSeek functionality using Meta's LLaMA
 ## 📦 Repository
 - **GitHub:** https://github.com/Umanghere/DeepSeek
 
+## 📸 Screenshots
+
+### 💬 User Interface without Login
+![User Interface Without Login](https://github.com/Umanghere/DeepSeek/blob/main/assets/images/Screenshot%202025-08-19%20113619.png?raw=true)
+
+![No Chat History when Logged out](https://github.com/Umanghere/DeepSeek/blob/main/assets/images/Screenshot%202025-08-19%20113629.png?raw=true)
+
+### 🔐 Authentication using Clerks
+![User Authentication using Clerks](https://github.com/Umanghere/DeepSeek/blob/main/assets/images/Screenshot%202025-08-19%20113649.png?raw=true)
+
+### 💬 User Interface after Login
+![User Interface after Login](https://github.com/Umanghere/DeepSeek/blob/main/assets/images/Screenshot%202025-08-19%20113717.png?raw=true)
+
+![Chat with AI](https://github.com/Umanghere/DeepSeek/blob/main/assets/images/Screenshot%202025-08-19%20113756.png?raw=true)
+
 ## ✨ Features
 - 🤖 **AI-Powered Responses** - Integration with Meta's LLaMA API
 - 🔐 **Secure Authentication** - Clerk-based user authentication and management
@@ -149,3 +164,4 @@ Navigate to `http://localhost:3000`
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
