@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DeepSeek Clone - AI Chatbot
 
-## Getting Started
+A sophisticated AI chatbot that mimics DeepSeek functionality using Meta's LLaMA API for intelligent responses with real-time message rendering and persistent chat history.
 
-First, run the development server:
+## 🚀 Live Demo
+- **App:** https://deepseek-umber.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📦 Repository
+- **GitHub:** https://github.com/Umanghere/DeepSeek
+
+## ✨ Features
+- 🤖 **AI-Powered Responses** - Integration with Meta's LLaMA API
+- 🔐 **Secure Authentication** - Clerk-based user authentication and management
+- ⚡ **Real-time Messaging** - Instant message rendering and streaming
+- 💾 **Persistent Chat History** - User-specific conversations saved across sessions
+- 🎨 **Modern UI/UX** - Clean, DeepSeek-inspired interface
+- 📱 **Responsive Design** - Works seamlessly on all devices
+- 👤 **User Profiles** - Personalized user experience with Clerk
+- 🔄 **Session Management** - Maintain conversation context per user
+
+## 🛠️ Tech Stack
+**Frontend:** 
+- React.js
+- CSS3
+- JavaScript (ES6+)
+**Backend:** 
+- Node.js
+- Express.js
+**Authentication:** 
+- Clerk (User Management & Auth)
+**AI Integration:** 
+- Meta LLaMA API
+**Other:**
+- REST APIs, Session Management
+
+## 📁 Project Structure
+```
+deepseek-clone/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── backend/
+│   ├── routes/
+│   ├── controllers/
+│   └── server.js
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Environment Variables
+Create `.env` file in backend directory:
+```
+PORT=5000
+LLAMA_API_KEY=your_llama_api_key_here
+LLAMA_API_URL=your_llama_api_endpoint
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create `.env.local` file in frontend directory:
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- LLaMA API access
+- Clerk account for authentication
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**
+```bash
+- git clone https://github.com/Umanghere/DeepSeek-Clone
+- cd DeepSeek-Clone
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**
+```bash
+# Install backend dependencies
+- cd backend
+- npm install
 
-## Deploy on Vercel
+# Install frontend dependencies
+- cd ../frontend
+- npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Set up environment variables**
+```bash
+# Create .env file in backend directory
+- cp .env.example .env
+# Add your LLaMA API credentials
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Run the application**
+```bash
+# Start backend server (Terminal 1)
+- cd backend
+- npm run dev
+
+# Start frontend (Terminal 2)
+- cd frontend
+- npm start
+```
+
+5. **Open your browser**
+Navigate to `http://localhost:3000`
+
+## 🔧 Scripts
+
+#### Backend
+- `npm run dev` - Start development server with nodemon
+- `npm start` - Start production server
+
+#### Frontend  
+- `npm start` - Start development server
+- `npm run build` - Create production build
+- `npm test` - Run tests
+
+## 🌟 Key Highlights
+
+- **LLaMA API Integration** - Successfully integrated Meta's LLaMA API for intelligent, context-aware responses
+- **Real-time Communication** - Implemented streaming responses for natural conversation flow
+- **Persistent Storage** - Chat history maintained across browser sessions
+- **Clerk Authentication Integration** - Implemented secure user authentication with Clerk, enabling user-specific chat sessions, profile management, and seamless sign-in/sign-up experience with social providers support
+- **Performance Optimized** - Efficient API calls and response caching
+- **Professional UI** - Clean, modern interface inspired by leading AI platforms
+
+## 🔮 Future Enhancements
+
+- [ ] User authentication and profiles
+- [ ] Multiple chat sessions/threads
+- [ ] Export chat functionality
+- [ ] Dark/light theme toggle
+- [ ] Voice input integration
+- [ ] Mobile app version
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
