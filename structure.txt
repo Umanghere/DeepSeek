@@ -22,36 +22,6 @@ D:.
 |   \---api
 |       \---clerk
 |               route.js
-|               
-+---assets
-|       arrow_icon.svg
-|       arrow_icon_dull.svg
-|       assets.js
-|       chat_icon.svg
-|       chat_icon_dull.svg
-|       copy_icon.svg
-|       deepthink_icon.svg
-|       delete_icon.svg
-|       dislike_icon.svg
-|       favicon.ico
-|       like_icon.svg
-|       logo_icon.svg
-|       logo_text.svg
-|       menu_icon.svg
-|       new_icon.svg
-|       pencil_icon.svg
-|       phone_icon.svg
-|       phone_icon_dull.svg
-|       pin_icon.svg
-|       profile_icon.svg
-|       qrcode.png
-|       regenerate_icon.svg
-|       search_icon.svg
-|       sidebar_close_icon.svg
-|       sidebar_icon.svg
-|       tbsm.jpg
-|       tbsm.svg
-|       three_dots.svg
 |       
 +---components
 |       ChatLabel.jsx
